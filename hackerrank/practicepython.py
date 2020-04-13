@@ -42,3 +42,4 @@ inp_info(name_age)
 print(name_age)
 info(name_age[0], name_age[1])
 
+print("hello Safeer")
