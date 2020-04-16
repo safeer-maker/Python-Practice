@@ -13,5 +13,32 @@ for x in range(length_of_array):
 print (output_array)
 
 output_list = str(output_array)
-output_list.replace(",", " ")
-print ("Data in output is " + output_list[1])
+output = output_list.replace(", ", " ").replace("[","").replace("]",'')
+print ("Data in output is " + output)
+
+""" #Hacker rank code but not giving output 
+
+import math
+import os
+import random
+import re
+import sys
+
+
+length_of_array = int(input())
+array = []
+output_array = []
+
+
+array.append(input())
+
+for x in range(length_of_array):
+        output_array.append(int(length_of_array) - int(x))
+
+out = output_array.replace(", ", " ").replace("[","").replace("]",'')
+
+print (str(output_array))
+
+
+
+"""
