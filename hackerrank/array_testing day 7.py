@@ -1,3 +1,5 @@
+
+
 length_of_array = int(input("Length of input : "))
 array = []
 output_array = []
@@ -8,7 +10,7 @@ print (array)
 
 for x in range(length_of_array):
         output_array.append(int(length_of_array) - int(x))
-        print(x)
+        
 
 print (output_array)
 
