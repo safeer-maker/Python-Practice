@@ -1,38 +1,47 @@
 import random
 
 def input_fun():
-    while (True):
-        user_inp = input("please Enter your hosen number between 1 to 9 : ")
+    while True:
+        guess = input("Enter your choice (1 to 9): ")
         try:
-            user_inp = int(user_inp)
+            guess = int(guess)
+            if (guess in range(1,9)): raise 'Out of Range:'
             break
         except:
-            print("You have enter an in valid number please try again\n")
+            print("Invalid choice")
+    return guess
 
-    return user_inp
 
+value = random.randint(1,9)
+print("The Rangon no chen is " + str(value))
+inp_list = []
 
-inp = random.randint(1,9)
-print("The Rangon no chen is " + str(inp))
-user_inp_list = []
 while (True):
-    user_inp = input_fun()
-    user_inp_list.append(user_inp)
-    #   print ("User input is " + str(user_inp))
-    if user_inp > inp:
-        if user_inp > (inp+5):
-            print("Too muh greater Guess")
+    guess = input_fun()
+    inp_list.append(guess)
+    #   print ("User input is " + str(guess))
+    
+    if guess > value:
+        if guess > (value+5):
+            print("Too much greater Guess")
         else:
             print ("Grater value")
-    elif user_inp < inp:
-        if user_inp < (inp-5):
+    elif guess < value:
+        if guess < (value-5):
             print("Too much less Guess")
         else:
             print("Less value")
     else:
         print("This is the guessed number")
-        print("Your gusses are " + str(user_inp_list))
+        print("Your gusses are " + str(inp_list))
         inp_cont = input("Press 1 to continue else close")
+        
+        """
+        This should not work:
+            You are comparing int with string
+            Maybe it will work but try to understand this better
+        """
+
         if inp_cont == 1:
             continue
         else:
