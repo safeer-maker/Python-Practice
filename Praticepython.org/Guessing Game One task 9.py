@@ -5,7 +5,7 @@ def input_fun():
         guess = input("Enter your choice (1 to 9): ")
         try:
             guess = int(guess)
-            if (guess in range(1,9)): raise 'Out of Range:'
+            if (guess in range(1,9)): raise 'Out of Range:' # this is not working it gernates an error 
             break
         except:
             print("Invalid choice")
@@ -42,7 +42,7 @@ while (True):
             Maybe it will work but try to understand this better
         """
 
-        if inp_cont == 1:
+        if inp_cont == '1':
             continue
         else:
             break
