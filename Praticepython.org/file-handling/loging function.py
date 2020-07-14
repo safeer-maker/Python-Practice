@@ -1,15 +1,16 @@
 import datetime
 import time
 
+
+
+def log (fun_name = 'None', value = ''):
+    log = open('/home/sss/dev/git/Python-Practice/Praticepython.org/file-handling/file.txt', 'a')
+    log.write(str(datetime.datetime.now()) + " " + fun_name + " " + str(value) + "\n")
+    log.close()
+
+
 date_time = datetime.datetime.now()
 print(date_time)
-log = open('/home/sss/dev/git/Python-Practice/Praticepython.org/file-handling/file.txt', 'a')
 
-for i in range(5):
-    log.write(str(datetime.datetime.now()) + "\n")
-    i += 1
-    time.sleep(1)
-
-
-log.close()
+log ("test time" , 35.22)
 
