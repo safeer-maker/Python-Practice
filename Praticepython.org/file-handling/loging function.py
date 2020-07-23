@@ -1,7 +1,4 @@
 import datetime
-import time
-
-
 
 def log (fun_name = 'None', value = ''):
     log = open('/home/sss/dev/git/Python-Practice/Praticepython.org/file-handling/file.txt', 'a')
